@@ -23,19 +23,17 @@
 
        body {
            margin: 0;
-           padding: 0;
-           background-color: transparent; /* 允許 iframe 背景透明 */
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           min-height: 100vh;
+           padding: 20px 10px; /* 增加上下間距，防止貼齊螢幕邊緣 */
+           background-color: transparent;
+           /* 移除 flex 居中設定，解決上下大面積留白問題 */
+           display: block; 
        }
-
 
        .widget-container {
            background: #ffffff;
            width: 100%;
-           max-width: 450px; /* 手機版最佳寬度 */
+           max-width: 450px;
+           margin: 0 auto; /* 水平居中 */
            border-radius: 20px;
            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
            overflow: hidden;
