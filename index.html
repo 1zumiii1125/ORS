@@ -24,16 +24,18 @@
        body {
            margin: 0;
            padding: 0;
-           background-color: transparent;
-           /* 移除 flex 居中設定，解決上下大面積留白問題 */
-           display: block; 
+           background-color: transparent; /* 允許 iframe 背景透明 */
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 0;
        }
+
 
        .widget-container {
            background: #ffffff;
            width: 100%;
-           max-width: 450px;
-           margin: 0 auto; /* 水平居中 */
+           max-width: 450px; /* 手機版最佳寬度 */
            border-radius: 20px;
            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
            overflow: hidden;
@@ -569,3 +571,4 @@
 
 </body>
 </html>
+
